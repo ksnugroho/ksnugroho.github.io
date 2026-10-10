@@ -1,165 +1,540 @@
-<?php
-date_default_timezone_set("Asia/Jakarta"); // default time
-
-function salam(){ // fuction salam
-	$time = date("H");
-	$timezone = date("e");
-	if ($time < "12") {
-			echo "Selamat Pagi";
-	} else if ($time >= "12" && $time < "17") {
-			echo "Selamat Siang";
-	} else if ($time >= "17" && $time < "19") {
-			echo "Selamat Sore";
-	} else if ($time >= "19") {
-			echo "Selamat Malam";
-	}
-}
-
-function pesan(){ // fuction salam
-	$time = date("H");
-	$timezone = date("e");
-	if ($time < "12") {
-			echo "Semangat pagi menyambut hari baru";
-	} else if ($time >= "12" && $time < "17") {
-			echo "Mager time, Movie time";
-	} else if ($time >= "17" && $time < "19") {
-			echo "Waktunya olahraga biar sehat.";
-	} else if ($time >= "19") {
-			echo "Cepat tidur, jangan lupa gosok gigi kak";
-	}
-}
-?>
-
-<script type="text/javascript">
-	function date_time(id) {
-		date = new Date;
-		year = date.getFullYear();
-		month = date.getMonth();
-		months = new Array('Januari', 'Februari', 'Maret', 'April', 'Mae', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
-		d = date.getDate();
-		day = date.getDay();
-		days = new Array('Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu');
-		h = date.getHours();
-		if (h < 10) {
-			h = "0" + h;
-		}
-		m = date.getMinutes();
-		if (m < 10) {
-			m = "0" + m;
-		}
-		s = date.getSeconds();
-		if (s < 10) {
-			s = "0" + s;
-		}
-		// result = ''+days[day]+' '+d+' '+months[month]+' '+year+' '+h+':'+m+':'+s;
-		document.getElementById(id).innerHTML = '' + h + ':' + m + ':' + s + ' <br/> ' + days[day] + ' , ' + d + ' ' + months[month] + ' ' + year;
-		setTimeout('date_time("' + id + '");', '1000');
-		return true;
-	}
-</script>
-
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Hi, Lysa ! 💦</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="shortcut icon" href="images/leaf.png">
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuncahyo Setyo Nugroho</title>
+<meta name="description" content="Kuncahyo Setyo Nugroho — AI Research Associate at the Bioinformatics & Data Science Research Center, Bina Nusantara University. Applied machine learning, affective computing, and NLP for Indonesian." />
+<meta name="author" content="Kuncahyo Setyo Nugroho" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kuncahyo Setyo Nugroho" />
+<meta property="og:description" content="AI Research Associate, Bina Nusantara University. Applied ML, affective computing, and NLP for Indonesian." />
+<meta property="og:url" content="https://ksnugroho.github.io/" />
+<meta property="og:image" content="https://ksnugroho.github.io/profile.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f62fe'/%3E%3Ctext x='50' y='68' font-family='IBM Plex Sans,sans-serif' font-size='52' font-weight='600' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+
+<!-- IBM Plex Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --font: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --bg: #ffffff;
+    --surface: #f7f8fa;
+    --surface-2: #eef1f6;
+    --text: #16181d;
+    --muted: #5b6270;
+    --faint: #8a909c;
+    --border: #e4e7ed;
+    --accent: #0f62fe;        /* IBM Blue */
+    --accent-strong: #0a4ad1;
+    --tag-bg: #eaf0ff;
+    --tag-text: #0a3cc0;
+    --max: 860px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e1116; --surface:#161a21; --surface-2:#1c222b;
+      --text:#e9ecf2; --muted:#a3abba; --faint:#79818f;
+      --border:#262c36; --accent:#78a9ff; --accent-strong:#9cc0ff;
+      --tag-bg:#172138; --tag-text:#9cc0ff;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e1116; --surface:#161a21; --surface-2:#1c222b;
+    --text:#e9ecf2; --muted:#a3abba; --faint:#79818f;
+    --border:#262c36; --accent:#78a9ff; --accent-strong:#9cc0ff;
+    --tag-bg:#172138; --tag-text:#9cc0ff;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:72px;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--font); font-size:16px; line-height:1.65;
+    font-weight:400; -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{color:var(--accent-strong); text-decoration:underline;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(1.6) blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:0 24px;
+    height:60px; display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{font-weight:600; font-size:16px; letter-spacing:-.01em; color:var(--text);}
+  .brand:hover{text-decoration:none; color:var(--accent);}
+  .nav-links{display:flex; gap:22px; align-items:center;}
+  .nav-links a{
+    color:var(--muted); font-size:14.5px; font-weight:500; letter-spacing:.005em;
+  }
+  .nav-links a:hover{color:var(--accent); text-decoration:none;}
+  .theme-btn{
+    background:none; border:1px solid var(--border); color:var(--muted);
+    width:34px; height:34px; border-radius:8px; cursor:pointer; font-size:15px;
+    display:inline-flex; align-items:center; justify-content:center; line-height:1;
+  }
+  .theme-btn:hover{color:var(--accent); border-color:var(--accent);}
+  @media (max-width:720px){
+    .nav-links{gap:14px;}
+    .nav-links a.hide-sm{display:none;}
+  }
+
+  /* ---------- Layout ---------- */
+  main{max-width:var(--max); margin:0 auto; padding:0 24px 80px;}
+  section{padding-top:52px;}
+  .section-title{
+    font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 18px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .section-title::after{content:""; flex:1; height:1px; background:var(--border);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding-top:48px; display:grid; grid-template-columns:200px 1fr; gap:34px; align-items:start;}
+  .hero-photo{
+    width:200px; height:200px; border-radius:16px; object-fit:cover;
+    border:1px solid var(--border); box-shadow:0 6px 24px rgba(0,0,0,.14);
+  }
+  .hero h1{font-size:30px; line-height:1.15; margin:2px 0 6px; letter-spacing:-.02em; font-weight:600;}
+  .hero .role{font-size:16.5px; color:var(--text); font-weight:500; margin:0;}
+  .hero .affil{font-size:15.5px; color:var(--muted); margin:2px 0 0;}
+  .contact-line{margin-top:14px; font-size:14px; color:var(--muted);}
+  .contact-line a{font-weight:500;}
+  .social{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
+  .social a{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:13.5px; font-weight:500; color:var(--text);
+    border:1px solid var(--border); background:var(--surface);
+    padding:6px 12px; border-radius:999px;
+  }
+  .social a:hover{border-color:var(--accent); color:var(--accent); text-decoration:none;}
+  .social svg{width:15px; height:15px;}
+  @media (max-width:640px){
+    .hero{grid-template-columns:1fr; gap:22px; text-align:left;}
+    .hero-photo{width:160px; height:160px;}
+  }
+
+  p{margin:0 0 14px;}
+  .lead{font-size:16.5px; color:var(--text);}
+  .muted{color:var(--muted);}
+
+  /* ---------- Interests card ---------- */
+  .card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:14px; padding:22px 24px;
+  }
+  .interests{list-style:none; margin:10px 0 0; padding:0; display:grid; gap:9px;}
+  .interests li{position:relative; padding-left:22px; color:var(--text); font-size:15.5px;}
+  .interests li::before{
+    content:""; position:absolute; left:0; top:9px; width:8px; height:8px;
+    border-radius:2px; background:var(--accent); transform:rotate(45deg);
+  }
+
+  /* ---------- News ---------- */
+  .news{list-style:none; margin:0; padding:0; display:grid; gap:2px;}
+  .news li{
+    display:grid; grid-template-columns:104px 1fr; gap:16px;
+    padding:9px 0; border-bottom:1px dashed var(--border); align-items:baseline;
+  }
+  .news li:last-child{border-bottom:none;}
+  .news .date{
+    font-size:12.5px; font-weight:600; letter-spacing:.03em; color:var(--faint);
+    white-space:nowrap; font-variant-numeric:tabular-nums;
+  }
+  .news .what{font-size:15px; color:var(--text);}
+  .news .what .tag{
+    display:inline-block; font-size:11px; font-weight:600; letter-spacing:.04em;
+    color:var(--tag-text); background:var(--tag-bg); border-radius:5px;
+    padding:1px 7px; margin-right:7px; vertical-align:1px;
+  }
+  @media (max-width:560px){
+    .news li{grid-template-columns:1fr; gap:2px;}
+  }
+
+  /* ---------- Publications ---------- */
+  .pub-group{margin-bottom:26px;}
+  .pub-group h3{
+    font-size:14px; font-weight:600; color:var(--muted); letter-spacing:.02em;
+    margin:0 0 12px; text-transform:uppercase; letter-spacing:.08em;
+  }
+  ol.pubs{margin:0; padding:0; list-style:none; counter-reset:pub; display:grid; gap:14px;}
+  ol.pubs li{
+    position:relative; padding-left:34px; font-size:14.8px; line-height:1.55; color:var(--text);
+  }
+  ol.pubs li::before{
+    counter-increment:pub; content:counter(pub);
+    position:absolute; left:0; top:1px;
+    width:23px; height:23px; border-radius:7px;
+    background:var(--surface-2); color:var(--muted);
+    font-size:12px; font-weight:600; display:flex; align-items:center; justify-content:center;
+    font-variant-numeric:tabular-nums;
+  }
+  ol.pubs .ptitle{font-weight:600; color:var(--text);}
+  ol.pubs .venue{color:var(--muted); font-style:italic;}
+  ol.pubs .me{color:var(--accent); font-weight:600; font-style:normal;}
+  ol.pubs .doi{font-size:12.5px; font-weight:500;}
+
+  /* ---------- Generic lists ---------- */
+  .tl{list-style:none; margin:0; padding:0; display:grid; gap:12px;}
+  .tl li{display:grid; grid-template-columns:150px 1fr; gap:16px; font-size:14.8px; align-items:baseline;}
+  .tl .when{font-size:12.5px; font-weight:600; color:var(--faint); letter-spacing:.02em; white-space:nowrap;}
+  .tl .body .t{font-weight:600; color:var(--text);}
+  .tl .body .s{color:var(--muted);}
+  @media (max-width:560px){ .tl li{grid-template-columns:1fr; gap:1px;} }
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  @media (max-width:640px){ .two-col{grid-template-columns:1fr; gap:28px;} }
+  .plain{list-style:none; margin:0; padding:0; display:grid; gap:9px;}
+  .plain li{position:relative; padding-left:20px; font-size:14.8px; color:var(--text);}
+  .plain li::before{content:""; position:absolute; left:0; top:10px; width:6px; height:6px; border-radius:50%; background:var(--faint);}
+  .plain li .meta{display:block; color:var(--faint); font-size:12.5px; font-weight:500; letter-spacing:.02em;}
+
+  /* ---------- Experience ---------- */
+  .exp{list-style:none; margin:0; padding:0; display:grid; gap:18px;}
+  .exp li{border-left:2px solid var(--border); padding:0 0 2px 18px; position:relative;}
+  .exp li::before{content:""; position:absolute; left:-5px; top:6px; width:8px; height:8px; border-radius:50%; background:var(--accent);}
+  .exp .role-t{font-weight:600; font-size:15.5px;}
+  .exp .org{color:var(--muted); font-size:14.5px;}
+  .exp .when{color:var(--faint); font-size:12.5px; font-weight:600; letter-spacing:.02em; margin-top:1px;}
+
+  /* ---------- CV callout ---------- */
+  .cv-box{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;
+    background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 24px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:#fff;
+    font-weight:600; font-size:14.5px; padding:10px 18px; border-radius:10px;
+  }
+  .btn:hover{background:var(--accent-strong); color:#fff; text-decoration:none;}
+
+  footer{
+    max-width:var(--max); margin:0 auto; padding:30px 24px 50px;
+    border-top:1px solid var(--border); color:var(--faint); font-size:13px;
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px;
+  }
+</style>
 </head>
 
-<body class="is-preload">
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Kuncahyo S. Nugroho</a>
+    <div class="nav-links">
+      <a href="#about" class="hide-sm">About</a>
+      <a href="#education" class="hide-sm">Education</a>
+      <a href="#news" class="hide-sm">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks &amp; Teaching</a>
+      <a href="#service" class="hide-sm">Service</a>
+      <a href="#cv">CV</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+    </div>
+  </div>
+</nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+<main id="top">
 
-		<!-- Main -->
-		<section id="main">
-			<header>
-				<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-				<p>
-					<span id="date_time"></span>
-					<script type="text/javascript">window.onload = date_time('date_time');</script>
-				</p>
-				<h1>Hi, Lysa ! <br> <?php salam() ?></h1>
-				<p><?php pesan() ?></p>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img class="hero-photo" src="profile.jpg" alt="Kuncahyo Setyo Nugroho" />
+    <div>
+      <h1>Kuncahyo Setyo Nugroho</h1>
+      <p class="role">AI Research Associate · NVIDIA DLI Certified Instructor</p>
+      <p class="affil">Bioinformatics &amp; Data Science Research Center (BDSRC)<br/>Bina Nusantara University, Indonesia</p>
 
-			</header>
-			<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-								</div>
-								<div class="field">
-									<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-								</div>
-								<div class="field">
-									<label>But are you a robot?</label>
-									<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-									<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-								</div>
-							</div>
-							<ul class="actions special">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						 -->
-			<footer>
-				<ul class="icons">
-					<!-- <li><a href="#" class="icon brands fa-twitter">Twitter</a></li> -->
-					<li><a href="https://www.instagram.com/lysaascarya/" class="icon brands fa-instagram">Instagram</a>
-					</li>
-					<!-- <li><a href="#" class="icon brands fa-facebook-f">Facebook</a></li> -->
-				</ul>
-			</footer>
-		</section>
+      <div class="contact-line">
+        <a href="mailto:ksnugroho26@gmail.com">ksnugroho26@gmail.com</a>
+      </div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="copyright">
-				<li>Made With ❤️ Cahyo</li><br>
-				Template: <a href="https://html5up.net/" target="_blank">HTML5 UP</a>
-				<li>Image: <a href="https://unsplash.com/" target="_blank">Unsplash </li>
-				<li></li>
-			</ul>
-		</footer>
+      <div class="social">
+        <a href="https://ksnugroho.id" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Website
+        </a>
+        <a href="https://github.com/ksnugroho" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+        <a href="https://huggingface.co/ksnugroho" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="10.5" r="1.4" fill="var(--bg)"/><circle cx="15.5" cy="10.5" r="1.4" fill="var(--bg)"/><path d="M8 14.5c1 1.4 2.4 2.1 4 2.1s3-.7 4-2.1" stroke="var(--bg)" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+          Hugging Face
+        </a>
+        <!-- Add when ready:
+        <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/XXXX" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://orcid.org/XXXX" target="_blank" rel="noopener">ORCID</a>
+        -->
+      </div>
+    </div>
+  </header>
 
-	</div>
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <p class="lead">I am an <strong>AI researcher and educator</strong> with 6+ years of experience in applied machine learning and AI-driven systems, spanning end-to-end pipelines from model development to deployment. My work sits at the intersection of academic research, industry collaboration, and large-scale AI education.</p>
 
-	<!-- Scripts -->
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
+    <p>I am an AI Research Associate at the Bioinformatics &amp; Data Science Research Center, Bina Nusantara University, where I design and maintain the research infrastructure at the NVIDIA&ndash;BINUS AI Research &amp; Development Center (AIRDC) and conduct applied AI research with internal and external partners. I am also a <strong>Platinum-Tier Certified Instructor</strong> and University Ambassador for the NVIDIA Deep Learning Institute. I hold a Master of Computer Science in Intelligent Systems from Brawijaya University and a Professional Engineer (Ir.) degree in Informatics Engineering from Institut Teknologi Sepuluh Nopember (ITS).</p>
 
+    <div class="card" style="margin-top:22px;">
+      <strong>Research focus</strong>
+      <ul class="interests">
+        <li>Affective computing &amp; emotion recognition in text and speech</li>
+        <li>Natural language processing for Indonesian &amp; low-resource languages</li>
+        <li>Applied AI for agriculture, aquaculture, and healthcare</li>
+        <li>Computer vision for real-world problems</li>
+        <li>End-to-end AI systems: large-scale training to deployment</li>
+        <li>AI education and curriculum at scale</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <ul class="exp">
+      <li>
+        <div class="role-t">Professional Engineer (Ir.), Informatics Engineering</div>
+        <div class="org">Institut Teknologi Sepuluh Nopember (ITS) &middot; GPA 3.96/4.00</div>
+        <div class="when">2023 &ndash; 2024</div>
+      </li>
+      <li>
+        <div class="role-t">M.Kom, Computer Science &mdash; Intelligent Systems</div>
+        <div class="org">Brawijaya University &middot; GPA 3.80/4.00</div>
+        <div class="when">2020 &ndash; 2023</div>
+        <div class="muted" style="font-size:13.5px; margin-top:3px;">Thesis: Contextual Language Models for Emotion Detection in Indonesian Text</div>
+      </li>
+      <li>
+        <div class="role-t">S.Kom, Computer Science &mdash; Software Engineering</div>
+        <div class="org">Widya Gama University &middot; GPA 3.39/4.00</div>
+        <div class="when">2013 &ndash; 2019</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section id="news">
+    <h2 class="section-title">What&rsquo;s New</h2>
+    <ul class="news">
+      <li><span class="date">2026-01</span><span class="what"><span class="tag">Certification</span>Earned the <strong>Generative AI Leader</strong> certification from Google Cloud.</span></li>
+      <li><span class="date">2025-12</span><span class="what"><span class="tag">Talk</span>Spoke at <strong>PyCon Indonesia</strong> &mdash; &ldquo;Why GPU Matters: Accelerate Your Data Science Research in Python.&rdquo;</span></li>
+      <li><span class="date">2025-11</span><span class="what"><span class="tag">Talk</span>Invited talk on AI-powered literature review (PRISMA) at the Faculty of Fisheries &amp; Marine Science, UNSOED.</span></li>
+      <li><span class="date">2025-09</span><span class="what"><span class="tag">Paper</span>&ldquo;Improving Indonesian Emotion Detection with OpenAI o4-mini Text Normalization&rdquo; accepted at <em>ICCSCI 2025</em> (Procedia CS).</span></li>
+      <li><span class="date">2025-09</span><span class="what"><span class="tag">Certification</span>Azure AI Fundamentals from Microsoft.</span></li>
+      <li><span class="date">2025</span><span class="what"><span class="tag">Award</span><strong>Best Paper</strong> at the International Conference on Information Technology Research &amp; Innovation (ICITRI) for the XLSR-Wav2Vec2 Indonesian SER work.</span></li>
+      <li><span class="date">2025-03</span><span class="what"><span class="tag">Milestone</span>Registered as a <strong>Junior Professional Engineer</strong> with the Institution of Engineers Indonesia (PII).</span></li>
+      <li><span class="date">2025-02</span><span class="what"><span class="tag">Certification</span>Associate Generative AI &amp; LLMs from NVIDIA.</span></li>
+      <li><span class="date">2024-06</span><span class="what"><span class="tag">Role</span>Became a <strong>University Ambassador &amp; Certified Instructor</strong> for the NVIDIA Deep Learning Institute (now Platinum Tier).</span></li>
+    </ul>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications">
+    <h2 class="section-title">Selected Publications</h2>
+
+    <div class="pub-group">
+      <h3>Journal Articles</h3>
+      <ol class="pubs">
+        <li>Hermawan, E. S., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Gradient Boosted CRCNet Pipeline for Indonesian Colorectal Cancer Genotype Selection.</span> <span class="venue">ICIC Express Letters</span> 19.2 (2025), 185&ndash;191. <a class="doi" href="https://doi.org/10.24507/icicel.19.02.185" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan, J. S., <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">MultiSURF-ACO: A Novel SNP Identification Approach for Colorectal Cancer Cases in Indonesia.</span> <span class="venue">International Journal of Fuzzy Logic and Intelligent Systems</span> 25.3 (2025), 247&ndash;257. <a class="doi" href="https://doi.org/10.5391/ijfis.2025.25.3.247" target="_blank" rel="noopener">doi</a></li>
+        <li>Tarigan, G. A., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Lighter Student Engagement Recognition in a Classroom Environment Using Skeletal Keypoints.</span> <span class="venue">IAENG International Journal of Computer Science</span> 52.6 (2025), 1997&ndash;2014.</li>
+        <li>Sulistyawan, J. S., K. Julian, G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">A Two-Step Feature Selection Approach for Identifying SNPs Associated with Colorectal Cancer.</span> <span class="venue">Communications in Mathematical Biology and Neuroscience</span>, Article 47 (2024). <a class="doi" href="https://doi.org/10.28919/cmbn/8468" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, A. Vidianto, and W. F. Mahmudy. <span class="ptitle">Effective Predictive Modelling for Coronary Artery Diseases Using Support Vector Machine.</span> <span class="venue">IAES International Journal of Artificial Intelligence</span> 11.1 (2022), 345&ndash;355. <a class="doi" href="https://doi.org/10.11591/ijai.v11.i1.pp345-355" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span>, Istiadi, and F. Marisa. <span class="ptitle">Naive Bayes Classifier Optimization for Text Classification on E-government Using Particle Swarm Optimization.</span> <span class="venue">Jurnal Teknologi dan Sistem Komputer</span> 8.1 (2020), 21. <a class="doi" href="https://doi.org/10.14710/jtsiskom.8.1.2020.21-26" target="_blank" rel="noopener">doi</a></li>
+      </ol>
+    </div>
+
+    <div class="pub-group">
+      <h3>Conference &amp; Symposium Papers</h3>
+      <ol class="pubs">
+        <li>Henry, M. M., D. C. Thio, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Improving Indonesian Emotion Detection with OpenAI o4-mini Text Normalization.</span> <span class="venue">Procedia Computer Science</span> 269 (ICCSCI 2025), 863&ndash;871. <a class="doi" href="https://doi.org/10.1016/j.procs.2025.09.029" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span>, S. W. Iriananda, I. Akbar, M. Isnan, and B. Pardamean. <span class="ptitle">Advancing End-to-End Indonesian Speech Emotion Recognition Using XLSR-Wav2Vec2.</span> <span class="venue">ICITRI 2025</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICITRI67507.2025.11232655" target="_blank" rel="noopener">doi</a></li>
+        <li>Isnan, M., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, I. L. Ritonga, R. P. J. Gultom, E. A. Lubis, and B. Pardamean. <span class="ptitle">InDRI: Intelligent Diagnosis Radiology Images.</span> <span class="venue">ICORIS 2024</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICORIS63540.2024.10903684" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan, J. S., <span class="me">K. S. Nugroho</span>, M. Isnan, and B. Pardamean. <span class="ptitle">Comparative Analysis of CNN Models for Multiclass Detection on Colon Disease.</span> <span class="venue">ICITDA 2024</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICITDA64560.2024.10809661" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span> and F. A. Bachtiar. <span class="ptitle">Text-Based Emotion Recognition in Indonesian Tweet using BERT.</span> <span class="venue">ISRITI 2021</span>, 570&ndash;574. <a class="doi" href="https://doi.org/10.1109/ISRITI54043.2021.9702838" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, H. Wuswilahaken DW, F. A. Bachtiar, and N. Yudistira. <span class="ptitle">BERT Fine-Tuning for Sentiment Analysis on Indonesian Mobile Apps Reviews.</span> <span class="venue">SIET &rsquo;21</span> (ACM), 258&ndash;264. <a class="doi" href="https://doi.org/10.1145/3479645.3479679" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, and N. Yudistira. <span class="ptitle">Large-Scale News Classification using BERT Language Model: Spark NLP Approach.</span> <span class="venue">SIET &rsquo;21</span> (ACM), 240&ndash;246. <a class="doi" href="https://doi.org/10.1145/3479645.3479658" target="_blank" rel="noopener">doi</a></li>
+      </ol>
+    </div>
+
+    <div class="pub-group">
+      <h3>Books &amp; Chapters</h3>
+      <ol class="pubs">
+        <li><span class="me">Nugroho, K. S.</span>, M. Isnan, T. Suparyanto, and B. Pardamean. <span class="ptitle">Aplikasi Kecerdasan Buatan untuk Pertanian Modern: Klasifikasi Penyakit Daun Tanaman.</span> <span class="venue">INSTIPER Press</span>, 2025. <a class="doi" href="https://ipress.instiperjogja.ac.id/book/57" target="_blank" rel="noopener">link</a></li>
+        <li><span class="me">Nugroho, K. S.</span> and F. A. Bachtiar. <span class="ptitle">Komputasi Afektif: Kemampuan Komputer untuk Mengenali Emosi Manusia.</span> <span class="venue">Book Chapter Seri 1 &mdash; Inovasi Teknologi dalam Digitalisasi Industri</span>, Vol. 1 (2021), 189&ndash;203.</li>
+        <li><span class="me">Nugroho, K. S.</span> and I. Istiadi. <span class="ptitle">E-Government Cerdas Berbasis Machine Learning: Peningkatan Kualitas Pelayanan Masyarakat di Indonesia.</span> <span class="venue">Book Chapter Seri 1 &mdash; Inovasi Teknologi dalam Digitalisasi Industri</span>, Vol. 1 (2021), 83&ndash;95.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <ul class="exp">
+      <li>
+        <div class="role-t">University Ambassador &amp; Certified Instructor <span style="font-weight:400; color:var(--faint); font-size:13px;">(Platinum Tier)</span></div>
+        <div class="org">NVIDIA Deep Learning Institute</div>
+        <div class="when">Jun 2024 &ndash; Present</div>
+      </li>
+      <li>
+        <div class="role-t">AI Research Associate</div>
+        <div class="org">Bioinformatics &amp; Data Science Research Center, Bina Nusantara University</div>
+        <div class="when">Nov 2023 &ndash; Present</div>
+      </li>
+      <li>
+        <div class="role-t">Academic Coordinator, AI Mastery Program</div>
+        <div class="org">Orbit Future Academy (PT Orbit Ventura Indonesia)</div>
+        <div class="when">Jan 2022 &ndash; Oct 2023</div>
+      </li>
+      <li>
+        <div class="role-t">Lecture &amp; Laboratory Assistant</div>
+        <div class="org">Widya Gama University &amp; Brawijaya University</div>
+        <div class="when">2021 &ndash; 2023</div>
+      </li>
+      <li>
+        <div class="role-t">Software Engineer</div>
+        <div class="org">ITC &amp; Data Center, Widya Gama University</div>
+        <div class="when">May 2018 &ndash; May 2021</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== TALKS & TEACHING ===== -->
+  <section id="talks">
+    <h2 class="section-title">Talks &amp; Teaching</h2>
+
+    <div class="pub-group">
+      <h3>Selected Invited Talks</h3>
+      <ul class="tl">
+        <li><span class="when">Dec 2025</span><span class="body"><span class="t">Why GPU Matters: Accelerate Your Data Science Research in Python.</span> <span class="s">Python Conference Indonesia (PyCon ID).</span></span></li>
+        <li><span class="when">Dec 2025</span><span class="body"><span class="t">Cloud-Powered Transformation: From Data to Smart Decisions with AI.</span> <span class="s">BNCC Workshop Tech Dive.</span></span></li>
+        <li><span class="when">Nov 2025</span><span class="body"><span class="t">AI-Powered Literature Review: Streamlining the PRISMA Workflow.</span> <span class="s">Faculty of Fisheries &amp; Marine Science, UNSOED.</span></span></li>
+        <li><span class="when">Jul 2025</span><span class="body"><span class="t">Navigating AI Wisely: When Technology Meets Morality.</span> <span class="s">Taldio AI Talk Series.</span></span></li>
+        <li><span class="when">May 2025</span><span class="body"><span class="t">Distributed Deep Learning: A Brief Introduction.</span> <span class="s">Laskar AI Talk Series.</span></span></li>
+        <li><span class="when">Apr 2025</span><span class="body"><span class="t">AI Solutions for Transportation.</span> <span class="s">Public Lecture, Ministry of Transportation of Indonesia.</span></span></li>
+        <li><span class="when">Mar&ndash;Apr 2025</span><span class="body"><span class="t">AI-Powered Healthcare &amp; AI-Powered Public Services.</span> <span class="s">Microsoft Garuda.</span></span></li>
+        <li><span class="when">2020&ndash;2022</span><span class="body"><span class="t">BERT &amp; Emotion Detection; NLP Real-World Implementations; Text Preprocessing for Bahasa.</span> <span class="s">PyCon Indonesia &amp; Universitas PGRI Kanjuruhan Malang.</span></span></li>
+      </ul>
+    </div>
+
+    <div class="pub-group">
+      <h3>Corporate Training &amp; Upskilling</h3>
+      <ul class="tl">
+        <li><span class="when">Dec 2025</span><span class="body"><span class="t">AI for Productivity with Copilot.</span> <span class="s">CBM Global Indonesia.</span></span></li>
+        <li><span class="when">Oct&ndash;Dec 2025</span><span class="body"><span class="t">Digital Transformation: AI for Work Efficiency.</span> <span class="s">PT Pegadaian (Kanwil XII Surabaya) &amp; PT Solusi Jaya.</span></span></li>
+        <li><span class="when">May 2025</span><span class="body"><span class="t">Building Ideation for AI Products &amp; Solutions.</span> <span class="s">PT AXA Financial Indonesia.</span></span></li>
+      </ul>
+    </div>
+
+    <div class="pub-group">
+      <h3>Mentoring &amp; Instruction</h3>
+      <ul class="tl">
+        <li><span class="when">2025</span><span class="body"><span class="t">Instructor &mdash; Asah &amp; LaskarAI Programs.</span> <span class="s">PT Presentologics (Dicoding).</span></span></li>
+        <li><span class="when">2024</span><span class="body"><span class="t">Mentor &mdash; Software Engineering, Kampus Merdeka.</span> <span class="s">RevoU (PT Revolusi Cita Edukasi).</span></span></li>
+        <li><span class="when">2024&ndash;2025</span><span class="body"><span class="t">Mentor &mdash; Python Fundamentals &amp; Python Pro.</span> <span class="s">Kodland Indonesia.</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH & SERVICE ===== -->
+  <section id="service">
+    <h2 class="section-title">Honors &amp; Service</h2>
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 12px;">Awards</h3>
+        <ul class="plain">
+          <li>Best Paper, 11th Information Technology International Seminar (2025)</li>
+          <li>Best Paper, Int. Conference on Information Technology Research &amp; Innovation &mdash; ICITRI (2025)</li>
+          <li>Best Paper, 6th Int. Conference on Sustainable Information Engineering &amp; Technology &mdash; SIET (2021)</li>
+          <li>Best Presenter, 4th Conference on Innovation &amp; Application of Science &amp; Technology (2021)</li>
+          <li>RISET Scholarship, Brawijaya University (2020)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 12px;">Certifications</h3>
+        <ul class="plain">
+          <li>Generative AI Leader <span class="meta">Google Cloud · 2026</span></li>
+          <li>Azure AI Fundamentals <span class="meta">Microsoft · 2025</span></li>
+          <li>Junior Professional Engineer <span class="meta">Institution of Engineers Indonesia · 2025</span></li>
+          <li>Associate Generative AI &amp; LLMs <span class="meta">NVIDIA · 2025</span></li>
+          <li>Microsoft Certified Educator <span class="meta">Microsoft · 2022</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;">
+      <h3 style="font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 12px;">Intellectual Property (Registered Copyright)</h3>
+      <ul class="plain" style="grid-template-columns:1fr 1fr; display:grid; gap:9px 30px;">
+        <li>MethylBERT <span class="meta">2023</span></li>
+        <li>InDRI: Intelligent Diagnosis of Radiology Images <span class="meta">2023</span></li>
+        <li>Integrated Strategic System for HR &amp; Marketing <span class="meta">2023</span></li>
+        <li>E-learning Integrated Expert System with Fuzzy Inference <span class="meta">2022</span></li>
+        <li>E-learning Expert System (ELREST) <span class="meta">2022</span></li>
+        <li>Rabbit Farming Information System <span class="meta">2021</span></li>
+        <li>Disease Consultation &times; Medical Record System <span class="meta">2021</span></li>
+        <li>Electronic Medical Record Expert System (EMREST) <span class="meta">2021</span></li>
+      </ul>
+    </div>
+
+    <p class="muted" style="margin-top:22px; font-size:14px;">Member, The Institution of Engineers Indonesia (PII).</p>
+  </section>
+
+  <!-- ===== CV ===== -->
+  <section id="cv">
+    <h2 class="section-title">Curriculum Vitae</h2>
+    <div class="cv-box">
+      <div>
+        <strong>Full CV (PDF)</strong>
+        <div class="muted" style="font-size:14px;">Complete publications, talks, and project history.</div>
+      </div>
+      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; <span id="year"></span> Kuncahyo Setyo Nugroho</span>
+  <span>Built with IBM Plex Sans · Hosted on GitHub Pages</span>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Theme toggle (persists per browser)
+  (function(){
+    var btn = document.getElementById('themeBtn');
+    var root = document.documentElement;
+    try{
+      var saved = localStorage.getItem('theme');
+      if(saved){ root.setAttribute('data-theme', saved); }
+    }catch(e){}
+    btn.addEventListener('click', function(){
+      var cur = root.getAttribute('data-theme');
+      var sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var now = cur ? cur : (sysDark ? 'dark' : 'light');
+      var next = now === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try{ localStorage.setItem('theme', next); }catch(e){}
+    });
+  })();
+</script>
 </body>
-
 </html>
