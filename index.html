@@ -143,6 +143,40 @@
     border-radius:2px; background:var(--accent); transform:rotate(45deg);
   }
 
+  /* ---------- Research direction ---------- */
+  .research{margin-top:26px;}
+  .research-head{
+    background:var(--accent); border-radius:14px 14px 0 0;
+    padding:16px 22px; text-align:center;
+  }
+  .research-eyebrow{
+    display:block; font-size:11px; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(255,255,255,.78); margin-bottom:3px;
+  }
+  .research-title{margin:0; color:#fff; font-size:17px; font-weight:600; letter-spacing:-.01em; line-height:1.35;}
+  .research-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:var(--border);
+    border:1px solid var(--border); border-top:none; border-radius:0 0 14px 14px; overflow:hidden;
+  }
+  .research-card{background:var(--surface); padding:20px 22px;}
+  .research-card h4{
+    margin:0 0 4px; font-size:15.5px; font-weight:600; color:var(--text); letter-spacing:-.01em;
+  }
+  .research-card h4 span{color:var(--accent); font-weight:600;}
+  .research-q{
+    margin:0 0 14px; font-size:13.5px; font-style:italic; color:var(--muted); line-height:1.45;
+  }
+  .research-list{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
+  .research-list li{position:relative; padding-left:20px; font-size:14.5px; color:var(--text); line-height:1.45;}
+  .research-list li::before{
+    content:""; position:absolute; left:0; top:8px; width:7px; height:7px;
+    border-radius:2px; background:var(--accent); transform:rotate(45deg);
+  }
+  @media (max-width:620px){
+    .research-grid{grid-template-columns:1fr;}
+  }
+
   /* ---------- News ---------- */
   .news{list-style:none; margin:0; padding:0; display:grid; gap:2px;}
   .news li{
@@ -236,11 +270,9 @@
     <div class="nav-links">
       <a href="#about" class="hide-sm">About</a>
       <a href="#education" class="hide-sm">Education</a>
-      <a href="#news" class="hide-sm">News</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks &amp; Teaching</a>
       <a href="#service" class="hide-sm">Service</a>
-      <a href="#cv">CV</a>
       <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
     </div>
   </div>
@@ -254,17 +286,13 @@
     <div>
       <h1>Kuncahyo Setyo Nugroho</h1>
       <p class="role">AI Research Associate · NVIDIA DLI Certified Instructor</p>
-      <p class="affil">Bioinformatics &amp; Data Science Research Center (BDSRC)<br/>Bina Nusantara University, Indonesia</p>
+      <p class="affil">Bioinformatics &amp; Data Science Research Center (BDSRC)<br/>NVIDIA&ndash;BINUS AI Research &amp; Development Center (AIRDC)<br/>Bina Nusantara University, Indonesia</p>
 
       <div class="contact-line">
-        <a href="mailto:ksnugroho26@gmail.com">ksnugroho26@gmail.com</a>
+        <a href="mailto:kuncahyo.nugroho@binus.edu">kuncahyo.nugroho@binus.edu</a>
       </div>
 
       <div class="social">
-        <a href="https://ksnugroho.id" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-          Website
-        </a>
         <a href="https://github.com/ksnugroho" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
           GitHub
@@ -272,6 +300,10 @@
         <a href="https://huggingface.co/ksnugroho" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="10.5" r="1.4" fill="var(--bg)"/><circle cx="15.5" cy="10.5" r="1.4" fill="var(--bg)"/><path d="M8 14.5c1 1.4 2.4 2.1 4 2.1s3-.7 4-2.1" stroke="var(--bg)" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
           Hugging Face
+        </a>
+        <a href="https://speakerdeck.com/ksnugroho" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>
+          Speaker Deck
         </a>
         <!-- Add when ready:
         <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a>
@@ -284,20 +316,35 @@
 
   <!-- ===== ABOUT ===== -->
   <section id="about">
-    <p class="lead">I am an <strong>AI researcher and educator</strong> with 6+ years of experience in applied machine learning and AI-driven systems, spanning end-to-end pipelines from model development to deployment. My work sits at the intersection of academic research, industry collaboration, and large-scale AI education.</p>
+    <p class="lead">I am an <strong>AI Research Associate</strong> at the Bioinformatics &amp; Data Science Research Center (BDSRC) and the NVIDIA&ndash;BINUS AI Research &amp; Development Center (AIRDC), Bina Nusantara University. I am also a Platinum-Tier Certified Instructor and University Ambassador for the NVIDIA Deep Learning Institute.</p>
 
-    <p>I am an AI Research Associate at the Bioinformatics &amp; Data Science Research Center, Bina Nusantara University, where I design and maintain the research infrastructure at the NVIDIA&ndash;BINUS AI Research &amp; Development Center (AIRDC) and conduct applied AI research with internal and external partners. I am also a <strong>Platinum-Tier Certified Instructor</strong> and University Ambassador for the NVIDIA Deep Learning Institute. I hold a Master of Computer Science in Intelligent Systems from Brawijaya University and a Professional Engineer (Ir.) degree in Informatics Engineering from Institut Teknologi Sepuluh Nopember (ITS).</p>
-
-    <div class="card" style="margin-top:22px;">
-      <strong>Research focus</strong>
-      <ul class="interests">
-        <li>Affective computing &amp; emotion recognition in text and speech</li>
-        <li>Natural language processing for Indonesian &amp; low-resource languages</li>
-        <li>Applied AI for agriculture, aquaculture, and healthcare</li>
-        <li>Computer vision for real-world problems</li>
-        <li>End-to-end AI systems: large-scale training to deployment</li>
-        <li>AI education and curriculum at scale</li>
-      </ul>
+    <div class="research">
+      <div class="research-head">
+        <span class="research-eyebrow">Research direction</span>
+        <h3 class="research-title">Affective Computing for Human-Centered Behavioral Intelligence</h3>
+      </div>
+      <div class="research-grid">
+        <div class="research-card">
+          <h4>Cognitive&ndash;Affective State Modeling <span>(CASM)</span></h4>
+          <p class="research-q">&ldquo;How can computers model cognitive and affective states from human behavior?&rdquo;</p>
+          <ul class="research-list">
+            <li>Multimodal emotion recognition (vision, speech, text)</li>
+            <li>Engagement &amp; fatigue estimation</li>
+            <li>Valence&ndash;arousal modeling</li>
+            <li>Explainable affective AI</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <h4>Human Behavioral Signal Analysis <span>(HBSA)</span></h4>
+          <p class="research-q">&ldquo;How can computers analyze and represent observable human behavior?&rdquo;</p>
+          <ul class="research-list">
+            <li>Vision-based pose &amp; gesture analysis</li>
+            <li>Sign language recognition (spatio-temporal modeling)</li>
+            <li>Facial expression &amp; micro-expression analysis</li>
+            <li>Multimodal behavioral representation learning</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -307,36 +354,19 @@
     <ul class="exp">
       <li>
         <div class="role-t">Professional Engineer (Ir.), Informatics Engineering</div>
-        <div class="org">Institut Teknologi Sepuluh Nopember (ITS) &middot; GPA 3.96/4.00</div>
-        <div class="when">2023 &ndash; 2024</div>
+        <div class="org">Sepuluh Nopember Institute of Technology</div>
+        <div class="muted" style="font-size:13.5px; margin-top:3px;">Final Project: IoT-Based Livestock Management and Automated Feeding System</div>
       </li>
       <li>
         <div class="role-t">M.Kom, Computer Science &mdash; Intelligent Systems</div>
-        <div class="org">Brawijaya University &middot; GPA 3.80/4.00</div>
-        <div class="when">2020 &ndash; 2023</div>
+        <div class="org">Brawijaya University</div>
         <div class="muted" style="font-size:13.5px; margin-top:3px;">Thesis: Contextual Language Models for Emotion Detection in Indonesian Text</div>
       </li>
       <li>
         <div class="role-t">S.Kom, Computer Science &mdash; Software Engineering</div>
-        <div class="org">Widya Gama University &middot; GPA 3.39/4.00</div>
-        <div class="when">2013 &ndash; 2019</div>
+        <div class="org">Widya Gama University</div>
+        <div class="muted" style="font-size:13.5px; margin-top:3px;">Undergraduate Thesis: Complaint Text Classification System using Naive Bayes Classifier</div>
       </li>
-    </ul>
-  </section>
-
-  <!-- ===== NEWS ===== -->
-  <section id="news">
-    <h2 class="section-title">What&rsquo;s New</h2>
-    <ul class="news">
-      <li><span class="date">2026-01</span><span class="what"><span class="tag">Certification</span>Earned the <strong>Generative AI Leader</strong> certification from Google Cloud.</span></li>
-      <li><span class="date">2025-12</span><span class="what"><span class="tag">Talk</span>Spoke at <strong>PyCon Indonesia</strong> &mdash; &ldquo;Why GPU Matters: Accelerate Your Data Science Research in Python.&rdquo;</span></li>
-      <li><span class="date">2025-11</span><span class="what"><span class="tag">Talk</span>Invited talk on AI-powered literature review (PRISMA) at the Faculty of Fisheries &amp; Marine Science, UNSOED.</span></li>
-      <li><span class="date">2025-09</span><span class="what"><span class="tag">Paper</span>&ldquo;Improving Indonesian Emotion Detection with OpenAI o4-mini Text Normalization&rdquo; accepted at <em>ICCSCI 2025</em> (Procedia CS).</span></li>
-      <li><span class="date">2025-09</span><span class="what"><span class="tag">Certification</span>Azure AI Fundamentals from Microsoft.</span></li>
-      <li><span class="date">2025</span><span class="what"><span class="tag">Award</span><strong>Best Paper</strong> at the International Conference on Information Technology Research &amp; Innovation (ICITRI) for the XLSR-Wav2Vec2 Indonesian SER work.</span></li>
-      <li><span class="date">2025-03</span><span class="what"><span class="tag">Milestone</span>Registered as a <strong>Junior Professional Engineer</strong> with the Institution of Engineers Indonesia (PII).</span></li>
-      <li><span class="date">2025-02</span><span class="what"><span class="tag">Certification</span>Associate Generative AI &amp; LLMs from NVIDIA.</span></li>
-      <li><span class="date">2024-06</span><span class="what"><span class="tag">Role</span>Became a <strong>University Ambassador &amp; Certified Instructor</strong> for the NVIDIA Deep Learning Institute (now Platinum Tier).</span></li>
     </ul>
   </section>
 
@@ -347,25 +377,45 @@
     <div class="pub-group">
       <h3>Journal Articles</h3>
       <ol class="pubs">
-        <li>Hermawan, E. S., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Gradient Boosted CRCNet Pipeline for Indonesian Colorectal Cancer Genotype Selection.</span> <span class="venue">ICIC Express Letters</span> 19.2 (2025), 185&ndash;191. <a class="doi" href="https://doi.org/10.24507/icicel.19.02.185" target="_blank" rel="noopener">doi</a></li>
-        <li>Sulistyawan, J. S., <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">MultiSURF-ACO: A Novel SNP Identification Approach for Colorectal Cancer Cases in Indonesia.</span> <span class="venue">International Journal of Fuzzy Logic and Intelligent Systems</span> 25.3 (2025), 247&ndash;257. <a class="doi" href="https://doi.org/10.5391/ijfis.2025.25.3.247" target="_blank" rel="noopener">doi</a></li>
-        <li>Tarigan, G. A., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Lighter Student Engagement Recognition in a Classroom Environment Using Skeletal Keypoints.</span> <span class="venue">IAENG International Journal of Computer Science</span> 52.6 (2025), 1997&ndash;2014.</li>
-        <li>Sulistyawan, J. S., K. Julian, G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">A Two-Step Feature Selection Approach for Identifying SNPs Associated with Colorectal Cancer.</span> <span class="venue">Communications in Mathematical Biology and Neuroscience</span>, Article 47 (2024). <a class="doi" href="https://doi.org/10.28919/cmbn/8468" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, A. Vidianto, and W. F. Mahmudy. <span class="ptitle">Effective Predictive Modelling for Coronary Artery Diseases Using Support Vector Machine.</span> <span class="venue">IAES International Journal of Artificial Intelligence</span> 11.1 (2022), 345&ndash;355. <a class="doi" href="https://doi.org/10.11591/ijai.v11.i1.pp345-355" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span>, Istiadi, and F. Marisa. <span class="ptitle">Naive Bayes Classifier Optimization for Text Classification on E-government Using Particle Swarm Optimization.</span> <span class="venue">Jurnal Teknologi dan Sistem Komputer</span> 8.1 (2020), 21. <a class="doi" href="https://doi.org/10.14710/jtsiskom.8.1.2020.21-26" target="_blank" rel="noopener">doi</a></li>
+        <li>Putra D.P., Nugraha N.S., Bimantio M.P., Suparyanto T., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Transformation of Pellet-Based Planting Media as an Organic Matter and Nutrient Enhancer for Improving Soil Quality.</span> <span class="venue">Communications in Mathematical Biology and Neuroscience</span> (2026), Art. 18. <a class="doi" href="https://doi.org/10.28919/CMBN/9727" target="_blank" rel="noopener">doi</a></li>
+        <li>Tarigan G.A., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Skeletal Keypoint-Based Pipeline as a Computer Vision-Based Approach.</span> <span class="venue">Communications in Mathematical Biology and Neuroscience</span> (2026), Art. 32. <a class="doi" href="https://doi.org/10.28919/cmbn/9820" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Bachtiar F.A., Mahmudy W.F., Henry M.M., Isnan M., Pangestu G., Pardamean B. <span class="ptitle">EmoTweetID: A dataset of Indonesian tweets for emotion classification and word embedding construction.</span> <span class="venue">Data in Brief</span> 68 (2026), Art. 113119. <a class="doi" href="https://doi.org/10.1016/j.dib.2026.113119" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan J.S., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">MultiSURF-ACO: A Novel SNP Identification Approach for Colorectal Cancer Cases in Indonesia.</span> <span class="venue">Int. J. of Fuzzy Logic and Intelligent Systems</span> 25.3 (2025), 247&ndash;257. <a class="doi" href="https://doi.org/10.5391/IJFIS.2025.25.3.247" target="_blank" rel="noopener">doi</a></li>
+        <li>Tarigan G.A., Elwirehardja G.N., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Lighter Student Engagement Recognition in a Classroom Environment Using Skeletal Keypoints.</span> <span class="venue">IAENG Int. J. of Computer Science</span> 52.6 (2025), 1997&ndash;2014. <a class="doi" href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-105007441640&amp;partnerID=40&amp;md5=83d92506f85814feb9a153d87a529fd3" target="_blank" rel="noopener">link</a></li>
+        <li>Hermawan E.S., Elwireharja G.N., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Gradient Boosted CRCNet Pipeline for Indonesia Colorectal Cancer Genotype Selection.</span> <span class="venue">ICIC Express Letters</span> 19.2 (2025), 185&ndash;191. <a class="doi" href="https://doi.org/10.24507/icicel.19.02.185" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan J.S., Julian K., Elwirehardja G.N., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">A Two-Step Feature Selection Approach for Identifying SNPs Associated with Colorectal Cancer.</span> <span class="venue">Communications in Mathematical Biology and Neuroscience</span> (2024), Art. 47. <a class="doi" href="https://doi.org/10.28919/cmbn/8468" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Sukmadewa A.Y., Vidianto A., Mahmudy W.F. <span class="ptitle">Effective predictive modelling for coronary artery diseases using support vector machine.</span> <span class="venue">IAES Int. J. of Artificial Intelligence</span> 11.1 (2022), 345&ndash;355. <a class="doi" href="https://doi.org/10.11591/ijai.v11.i1.pp345-355" target="_blank" rel="noopener">doi</a></li>
       </ol>
     </div>
 
     <div class="pub-group">
       <h3>Conference &amp; Symposium Papers</h3>
       <ol class="pubs">
-        <li>Henry, M. M., D. C. Thio, <span class="me">K. S. Nugroho</span>, and B. Pardamean. <span class="ptitle">Improving Indonesian Emotion Detection with OpenAI o4-mini Text Normalization.</span> <span class="venue">Procedia Computer Science</span> 269 (ICCSCI 2025), 863&ndash;871. <a class="doi" href="https://doi.org/10.1016/j.procs.2025.09.029" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span>, S. W. Iriananda, I. Akbar, M. Isnan, and B. Pardamean. <span class="ptitle">Advancing End-to-End Indonesian Speech Emotion Recognition Using XLSR-Wav2Vec2.</span> <span class="venue">ICITRI 2025</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICITRI67507.2025.11232655" target="_blank" rel="noopener">doi</a></li>
-        <li>Isnan, M., G. N. Elwirehardja, <span class="me">K. S. Nugroho</span>, I. L. Ritonga, R. P. J. Gultom, E. A. Lubis, and B. Pardamean. <span class="ptitle">InDRI: Intelligent Diagnosis Radiology Images.</span> <span class="venue">ICORIS 2024</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICORIS63540.2024.10903684" target="_blank" rel="noopener">doi</a></li>
-        <li>Sulistyawan, J. S., <span class="me">K. S. Nugroho</span>, M. Isnan, and B. Pardamean. <span class="ptitle">Comparative Analysis of CNN Models for Multiclass Detection on Colon Disease.</span> <span class="venue">ICITDA 2024</span>, 1&ndash;6. <a class="doi" href="https://doi.org/10.1109/ICITDA64560.2024.10809661" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span> and F. A. Bachtiar. <span class="ptitle">Text-Based Emotion Recognition in Indonesian Tweet using BERT.</span> <span class="venue">ISRITI 2021</span>, 570&ndash;574. <a class="doi" href="https://doi.org/10.1109/ISRITI54043.2021.9702838" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, H. Wuswilahaken DW, F. A. Bachtiar, and N. Yudistira. <span class="ptitle">BERT Fine-Tuning for Sentiment Analysis on Indonesian Mobile Apps Reviews.</span> <span class="venue">SIET &rsquo;21</span> (ACM), 258&ndash;264. <a class="doi" href="https://doi.org/10.1145/3479645.3479679" target="_blank" rel="noopener">doi</a></li>
-        <li><span class="me">Nugroho, K. S.</span>, A. Y. Sukmadewa, and N. Yudistira. <span class="ptitle">Large-Scale News Classification using BERT Language Model: Spark NLP Approach.</span> <span class="venue">SIET &rsquo;21</span> (ACM), 240&ndash;246. <a class="doi" href="https://doi.org/10.1145/3479645.3479658" target="_blank" rel="noopener">doi</a></li>
+        <li>Sanjaya M., Henry M.M., <span class="me">Nugroho K.S.</span>, Pardamean B., Dewi V.I. <span class="ptitle">Hybrid Deep Learning-Based Sentiment Analysis for Stock Market Euphoria: A Review of Recent Advances.</span> <span class="venue">ICCRAIDS 2026</span> (2026). <a class="doi" href="https://doi.org/10.1109/ICCRAIDS67816.2026.11519762" target="_blank" rel="noopener">doi</a></li>
+        <li>Sestomi E., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Deep Learning for Indonesian Sign Language Recognition: Methods, Trends, and Public Dataset.</span> <span class="venue">ICCRAIDS 2026</span> (2026). <a class="doi" href="https://doi.org/10.1109/ICCRAIDS67816.2026.11519748" target="_blank" rel="noopener">doi</a></li>
+        <li>Imani A., Nirwantono R., <span class="me">Nugroho K.S.</span>, Isnan M., Pardamean B. <span class="ptitle">StuntingDBPlus: Enhancing Data Integrity and Reliability in Stunting Case Monitoring.</span> <span class="venue">ICITRI 2025</span> (2025). <a class="doi" href="https://doi.org/10.1109/ICITRI67507.2025.11232749" target="_blank" rel="noopener">doi</a></li>
+        <li>Tanjaya R.D., Simanjuntak G.E., <span class="me">Nugroho K.S.</span>, Isnan M., Pardamean B. <span class="ptitle">Optimizing Transformer-Based Models for Financial Sentiment in Indonesian Stock Tweets.</span> <span class="venue">IEEE Information Technology Int. Seminar (ITIS) 2025</span> (2025), 214&ndash;219. <a class="doi" href="https://doi.org/10.1109/ITIS67966.2025.11308959" target="_blank" rel="noopener">doi</a></li>
+        <li>Hermawan E.S., Natanael Elwirehardja G., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Machine Learning for Genetic Disease Prediction: A Systematic Review.</span> <span class="venue">ICoAIT 2025</span> (2025), 305&ndash;309. <a class="doi" href="https://doi.org/10.1109/ICoAIT67446.2025.11308727" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Wardhana A.K., Isnan M., Pardamean B. <span class="ptitle">Low-Rank Adaptation of BERT for Indonesian Cognitive Distortion Detection.</span> <span class="venue">ICOIACT 2025</span> (2025), 13&ndash;17. <a class="doi" href="https://doi.org/10.1109/ICOIACT67584.2025.11345061" target="_blank" rel="noopener">doi</a></li>
+        <li>Henry M.M., Thio D.C., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Improving Indonesian Emotion Detection with OpenAI o4-mini Text Normalization.</span> <span class="venue">Procedia Computer Science</span> (2025), 863&ndash;871. <a class="doi" href="https://doi.org/10.1016/j.procs.2025.09.029" target="_blank" rel="noopener">doi</a></li>
+        <li>Preston G., Gonzolez G., Karnyoto A.S., Mozar F.S., Henry M.M., Isnan M., <span class="me">Nugroho K.S.</span>, Candra H., Doris M., Putri D.N.N., Sari T.K., Pardamean B., Djuana E., Speaks D., Budiman A.S. <span class="ptitle">Crack Catcher AI - Enabling Smart Fracture Mechanics Approach for Damage Control in Thin Silicon Wafers for 3D Semiconductor Integrated Devices/Packages.</span> <span class="venue">IEEE Int. Reliability Physics Symposium (IRPS) 2025</span> (2025). <a class="doi" href="https://doi.org/10.1109/IRPS48204.2025.10983660" target="_blank" rel="noopener">doi</a></li>
+        <li>Tarigan G.A., Elwirehardja G.N., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Computer Vision-Based Pose Estimation for Student Engagement Detection: Trends and Challenges.</span> <span class="venue">ICORIS 2025</span> (2025). <a class="doi" href="https://doi.org/10.1109/ICORIS67789.2025.11296082" target="_blank" rel="noopener">doi</a></li>
+        <li>Henry M.M., <span class="me">Nugroho K.S.</span>, Nirwantono R., Kusuma B., Pardamean B. <span class="ptitle">Automatic Morphology Landmark Detection in Marine Biotas: A Systematic Literature Review.</span> <span class="venue">ICoAIT 2025</span> (2025), 186&ndash;191. <a class="doi" href="https://doi.org/10.1109/ICoAIT67446.2025.11309191" target="_blank" rel="noopener">doi</a></li>
+        <li>Kwan F., Sulistyawan J.S., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Alzheimer Features for Analysis: An Explainable Gradient Boosting Approach.</span> <span class="venue">AIMLA 2025</span> (2025). <a class="doi" href="https://doi.org/10.1109/AIMLA63829.2025.11041645" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Iriananda S.W., Akbar I., Isnan M., Pardamean B. <span class="ptitle">Advancing End-To-End Indonesian Speech Emotion Recognition Using XLSR-Wav2Vec2.</span> <span class="venue">ICITRI 2025</span> (2025). <a class="doi" href="https://doi.org/10.1109/ICITRI67507.2025.11232655" target="_blank" rel="noopener">doi</a></li>
+        <li>Pramono T.B., Praniza M.A., <span class="me">Nugroho K.S.</span>, Isnan M., Pardamean B. <span class="ptitle">A Systematic Review on Computer Vision-Based Shrimp Larvae Detection and Counting.</span> <span class="venue">ICoAIT 2025</span> (2025), 174&ndash;179. <a class="doi" href="https://doi.org/10.1109/ICoAIT67446.2025.11308837" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan J.S., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Systematic Literature Review on Metaheuristic Algorithms in SNP Analysis for Diseases.</span> <span class="venue">ICORIS 2024</span> (2024). <a class="doi" href="https://doi.org/10.1109/ICORIS63540.2024.10903849" target="_blank" rel="noopener">doi</a></li>
+        <li>Isnan M., Elwirehardja G.N., <span class="me">Nugroho K.S.</span>, Ritonga I.L., Gultom R.P.J., Lubis E.A., Pardamean B. <span class="ptitle">InDRI: Intelligent Diagnosis Radiology Images.</span> <span class="venue">ICORIS 2024</span> (2024). <a class="doi" href="https://doi.org/10.1109/ICORIS63540.2024.10903684" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan J.S., <span class="me">Setyo Nugroho K.</span>, Pardamean B. <span class="ptitle">Explainable Tree-Based Boosting Algorithms for Smoker Detection Using Bio-Signals.</span> <span class="venue">ISRITI 2024</span> (2024), 114&ndash;119. <a class="doi" href="https://doi.org/10.1109/ISRITI64779.2024.10963483" target="_blank" rel="noopener">doi</a></li>
+        <li>Sulistyawan J.S., <span class="me">Nugroho K.S.</span>, Isnan M., Pardamean B. <span class="ptitle">Comparative Analysis of CNN Models for Multiclass Detection on Colon Disease.</span> <span class="venue">ICITDA 2024</span> (2024). <a class="doi" href="https://doi.org/10.1109/ICITDA64560.2024.10809661" target="_blank" rel="noopener">doi</a></li>
+        <li>Julian K., <span class="me">Nugroho K.S.</span>, Nirwantono R., Pardamean B. <span class="ptitle">Cancer Prediction using Clinical and Genomic Data Fusion: A Systematic Review.</span> <span class="venue">ICORIS 2024</span> (2024). <a class="doi" href="https://doi.org/10.1109/ICORIS63540.2024.10903934" target="_blank" rel="noopener">doi</a></li>
+        <li>Henry M.M., Heryanto N.A., Isnan M., <span class="me">Nugroho K.S.</span>, Pardamean B. <span class="ptitle">Automatic Multiple Choice Question Generation: A Systematic Literature Review.</span> <span class="venue">ICITDA 2024</span> (2024). <a class="doi" href="https://doi.org/10.1109/ICITDA64560.2024.10810102" target="_blank" rel="noopener">doi</a></li>
+        <li>Istiadi, Sulistiarini E.B., Joegijantoro R., Suksmawati A.N., <span class="me">Nugroho K.S.</span>, Akbar I. <span class="ptitle">Expert System Integrated with Medical Record for Infectious Diseases using Certainty Factor.</span> <span class="venue">CyberneticsCom 2022</span> (2022), 451&ndash;456. <a class="doi" href="https://doi.org/10.1109/CyberneticsCom55287.2022.9865639" target="_blank" rel="noopener">doi</a></li>
+        <li>Istiadi, Sulistiarini E.B., Joegijantoro R., Suksmawati A.N., <span class="me">Nugroho K.S.</span>, Akbar I. <span class="ptitle">An Integrated E-Learning Fuzzy Expert System for Acute Pharyngitis Diagnosis.</span> <span class="venue">ICITISEE 2022</span> (2022), 171&ndash;176. <a class="doi" href="https://doi.org/10.1109/ICITISEE57756.2022.10057861" target="_blank" rel="noopener">doi</a></li>
+        <li>Bachtiar F.A., Fauzulhaq A.D., Manullang M.T.R., Pontoh F.R., <span class="me">Nugroho K.S.</span>, Yudistira N. <span class="ptitle">A Generative-Based Chatbot for Daily Conversation: A Preliminary Study.</span> <span class="venue">ACM Int. Conf. Proceeding Series</span> (2022), 8&ndash;12. <a class="doi" href="https://doi.org/10.1145/3568231.3568234" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Bachtiar F.A. <span class="ptitle">Text-Based Emotion Recognition in Indonesian Tweet using BERT.</span> <span class="venue">ISRITI 2021</span> (2021), 570&ndash;574. <a class="doi" href="https://doi.org/10.1109/ISRITI54043.2021.9702838" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Sukmadewa A.Y., Yudistira N. <span class="ptitle">Large-Scale News Classification using BERT Language Model: Spark NLP Approach.</span> <span class="venue">ACM Int. Conf. Proceeding Series (SIET 2021)</span> (2021), 240&ndash;246. <a class="doi" href="https://doi.org/10.1145/3479645.3479658" target="_blank" rel="noopener">doi</a></li>
+        <li><span class="me">Nugroho K.S.</span>, Sukmadewa A.Y., Wuswilahaken Dw H., Bachtiar F.A., Yudistira N. <span class="ptitle">BERT Fine-Tuning for Sentiment Analysis on Indonesian Mobile Apps Reviews.</span> <span class="venue">ACM Int. Conf. Proceeding Series (SIET 2021)</span> (2021), 258&ndash;264. <a class="doi" href="https://doi.org/10.1145/3479645.3479679" target="_blank" rel="noopener">doi</a></li>
       </ol>
     </div>
 
@@ -377,38 +427,6 @@
         <li><span class="me">Nugroho, K. S.</span> and I. Istiadi. <span class="ptitle">E-Government Cerdas Berbasis Machine Learning: Peningkatan Kualitas Pelayanan Masyarakat di Indonesia.</span> <span class="venue">Book Chapter Seri 1 &mdash; Inovasi Teknologi dalam Digitalisasi Industri</span>, Vol. 1 (2021), 83&ndash;95.</li>
       </ol>
     </div>
-  </section>
-
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
-    <h2 class="section-title">Experience</h2>
-    <ul class="exp">
-      <li>
-        <div class="role-t">University Ambassador &amp; Certified Instructor <span style="font-weight:400; color:var(--faint); font-size:13px;">(Platinum Tier)</span></div>
-        <div class="org">NVIDIA Deep Learning Institute</div>
-        <div class="when">Jun 2024 &ndash; Present</div>
-      </li>
-      <li>
-        <div class="role-t">AI Research Associate</div>
-        <div class="org">Bioinformatics &amp; Data Science Research Center, Bina Nusantara University</div>
-        <div class="when">Nov 2023 &ndash; Present</div>
-      </li>
-      <li>
-        <div class="role-t">Academic Coordinator, AI Mastery Program</div>
-        <div class="org">Orbit Future Academy (PT Orbit Ventura Indonesia)</div>
-        <div class="when">Jan 2022 &ndash; Oct 2023</div>
-      </li>
-      <li>
-        <div class="role-t">Lecture &amp; Laboratory Assistant</div>
-        <div class="org">Widya Gama University &amp; Brawijaya University</div>
-        <div class="when">2021 &ndash; 2023</div>
-      </li>
-      <li>
-        <div class="role-t">Software Engineer</div>
-        <div class="org">ITC &amp; Data Center, Widya Gama University</div>
-        <div class="when">May 2018 &ndash; May 2021</div>
-      </li>
-    </ul>
   </section>
 
   <!-- ===== TALKS & TEACHING ===== -->
@@ -490,21 +508,6 @@
     </div>
 
     <p class="muted" style="margin-top:22px; font-size:14px;">Member, The Institution of Engineers Indonesia (PII).</p>
-  </section>
-
-  <!-- ===== CV ===== -->
-  <section id="cv">
-    <h2 class="section-title">Curriculum Vitae</h2>
-    <div class="cv-box">
-      <div>
-        <strong>Full CV (PDF)</strong>
-        <div class="muted" style="font-size:14px;">Complete publications, talks, and project history.</div>
-      </div>
-      <a class="btn" href="cv.pdf" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download CV
-      </a>
-    </div>
   </section>
 
 </main>
